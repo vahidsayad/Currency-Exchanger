@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  Currency Exchanger
+
+  Created by Vahid Sayad on 19/4/2022 .
+  
+*/
+"my_balance" = "My Balance";
+"currency_exchange" = "Currency Exchange";
+"submit" = "SUBMIT";
+"currency_converter" = "Currency Converter";
+"sell" = "Sell";
+"recieve" = "Recieve";
+"error" = "Error";
+"ok" = "OK";
+"enter_valid_amount" = "Enter a valid amount";
+"currency_not_found" = "Currency not found";
+"amount_not_available" = "Amount is not available to exchange";
