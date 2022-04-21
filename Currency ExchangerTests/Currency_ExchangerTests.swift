@@ -22,11 +22,11 @@ class Currency_ExchangerTests: XCTestCase {
         let sut = HomeView.ViewModel()
         sut.amount = "aer"
         sut.exchange()
-        XCTAssertEqual(sut.errorMessage, "enter_valid_amount".localized)
+        XCTAssertEqual(sut.alertMessage, "enter_valid_amount".localized)
         
         sut.amount = "10.2"
         sut.exchange()
-        XCTAssertNotEqual(sut.errorMessage, "enter_valid_amount".localized)
+        XCTAssertNotEqual(sut.alertMessage, "enter_valid_amount".localized)
     }
 
     func testPerformanceExample() throws {

@@ -85,8 +85,8 @@ struct HomeView: View {
             }
             .navigationTitle("currency_converter")
             .navigationBarTitleDisplayMode(.inline)
-            .alert(isPresented: $vm.showError) {
-                Alert(title: Text("error"), message: Text(vm.errorMessage), dismissButton: .default(Text("ok"), action: {
+            .alert(isPresented: $vm.showAlert) {
+                Alert(title: Text(vm.alertTitle), message: Text(vm.alertMessage), dismissButton: .default(Text("OK"), action: {
                 }))
             }
             .onAppear {

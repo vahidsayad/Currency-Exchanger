@@ -24,8 +24,9 @@ extension HomeView {
         }
         
         @Published var isLoading = false
-        @Published var showError = false
-        @Published var errorMessage = ""
+        @Published var showAlert = false
+        @Published var alertTitle = ""
+        @Published var alertMessage = ""
         
         init() {
             self.balances = getBalances()
@@ -45,7 +46,7 @@ extension HomeView {
                 if let error = error {
                     self?.showError(error)
                 } else {
-                    var numericAddAmount = Double(self?.amount ?? "") ?? 0
+                    let numericAddAmount = Double(self?.amount ?? "") ?? 0
                     
                     self?.updateBalance(amount: Double(balance?.amount ?? "") ?? 0,
                                         currency: self!.exchangeTo,
@@ -54,11 +55,18 @@ extension HomeView {
                     self?.updateBalance(amount: numericAddAmount,
                                         currency: self!.exchangeFrom,
                                         operation: .decrement)
-                    self?.amount = ""
                     self?.exchangedAmount = balance?.amount ?? "--"
+                    self?.showSuccessMessage()
+                    self?.amount = ""
                     self?.updateExchangeFreeFee()
                 }
             }
+        }
+        
+        private func showSuccessMessage() {
+            alertTitle = "Exchanged Successfully"
+            alertMessage = "You have converted \(amount) \(exchangeFrom.rawValue) to \(exchangedAmount) \(exchangeTo.rawValue). Commission Fee - \(exchangeInterest()) \(exchangeFrom.rawValue)."
+            showAlert = true
         }
         
         private func exchangeInterest() -> Double {
@@ -142,8 +150,9 @@ extension HomeView {
         }
         
         private func showError(_ error: String) {
-            self.errorMessage = error
-            self.showError = true
+            self.alertTitle = "Error"
+            self.alertMessage = error
+            self.showAlert = true
         }
         
         func refresh() {
