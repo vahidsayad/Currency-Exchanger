@@ -46,21 +46,29 @@ extension HomeView {
                 if let error = error {
                     self?.showError(error)
                 } else {
-                    let numericAddAmount = Double(self?.amount ?? "") ?? 0
-                    
-                    self?.updateBalance(amount: Double(balance?.amount ?? "") ?? 0,
-                                        currency: self!.exchangeTo,
-                                        operation: .increment)
-                    
-                    self?.updateBalance(amount: numericAddAmount,
-                                        currency: self!.exchangeFrom,
-                                        operation: .decrement)
-                    self?.exchangedAmount = balance?.amount ?? "--"
-                    self?.showSuccessMessage()
-                    self?.amount = ""
-                    self?.updateExchangeFreeFee()
+                    guard let balance = balance else {
+                        self?.showError("Exchange process failed!")
+                        return
+                    }
+                    self?.processExchange(result: balance)
                 }
             }
+        }
+        
+        private func processExchange(result: BalanceResponse) {
+            let numericAddAmount = Double(self.amount) ?? 0
+            
+            self.updateBalance(amount: Double(result.amount) ?? 0,
+                                currency: self.exchangeTo,
+                                operation: .increment)
+            
+            self.updateBalance(amount: numericAddAmount,
+                                currency: self.exchangeFrom,
+                                operation: .decrement)
+            self.exchangedAmount = result.amount
+            self.showSuccessMessage()
+            self.amount = ""
+            self.updateExchangeFreeFee()
         }
         
         private func showSuccessMessage() {
