@@ -101,7 +101,7 @@ extension HomeView {
             self.balances = self.getBalances()
         }
         
-        private func    isAmountValid(amount: String) -> Bool {
+        private func isAmountValid(amount: String) -> Bool {
             guard Double(amount.trimmingCharacters(in: .whitespacesAndNewlines)) != nil else {
                 self.showError("enter_valid_amount".localized)
                 return false

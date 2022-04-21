@@ -10,6 +10,7 @@
 		3D236FB5280E75710086CC58 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D236FB7280E75710086CC58 /* Localizable.strings */; };
 		3D236FB9280E765B0086CC58 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D236FB8280E765B0086CC58 /* String+Localized.swift */; };
 		3D236FBF280E7F910086CC58 /* HomeView.ViewMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D236FBE280E7F910086CC58 /* HomeView.ViewMode.swift */; };
+		3D236FD7281132BB0086CC58 /* Currency_ExchangerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D236FD6281132BB0086CC58 /* Currency_ExchangerTests.swift */; };
 		3DF616E7280D117A00DBD6BA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DF616E6280D117A00DBD6BA /* Colors.xcassets */; };
 		3DF616E9280D11B500DBD6BA /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF616E8280D11B500DBD6BA /* Color+.swift */; };
 		3DF616EC280D172D00DBD6BA /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF616EB280D172D00DBD6BA /* DataController.swift */; };
@@ -30,11 +31,23 @@
 		423027AC280C8A0900A3FA7F /* ExchangeView.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423027AB280C8A0900A3FA7F /* ExchangeView.ViewModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3D236FD8281132BB0086CC58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DF7F06E280BDFC600E8A9A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DF7F075280BDFC600E8A9A5;
+			remoteInfo = "Currency Exchanger";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		3D236FB6280E75710086CC58 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3D236FB8280E765B0086CC58 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		3D236FBE280E7F910086CC58 /* HomeView.ViewMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.ViewMode.swift; sourceTree = "<group>"; };
 		3D236FC0280E831F0086CC58 /* Currency-Exchanger-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Currency-Exchanger-Info.plist"; sourceTree = SOURCE_ROOT; };
+		3D236FD4281132BB0086CC58 /* Currency ExchangerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Currency ExchangerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D236FD6281132BB0086CC58 /* Currency_ExchangerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency_ExchangerTests.swift; sourceTree = "<group>"; };
 		3DF616E6280D117A00DBD6BA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		3DF616E8280D11B500DBD6BA /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		3DF616EB280D172D00DBD6BA /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
@@ -56,6 +69,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3D236FD1281132BB0086CC58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3DF7F073280BDFC600E8A9A5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -100,6 +120,14 @@
 			path = "Network API";
 			sourceTree = "<group>";
 		};
+		3D236FD5281132BB0086CC58 /* Currency ExchangerTests */ = {
+			isa = PBXGroup;
+			children = (
+				3D236FD6281132BB0086CC58 /* Currency_ExchangerTests.swift */,
+			);
+			path = "Currency ExchangerTests";
+			sourceTree = "<group>";
+		};
 		3DF616EA280D172400DBD6BA /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				3DF7F078280BDFC600E8A9A5 /* Currency Exchanger */,
+				3D236FD5281132BB0086CC58 /* Currency ExchangerTests */,
 				3DF7F077280BDFC600E8A9A5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -121,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				3DF7F076280BDFC600E8A9A5 /* Currency Exchanger.app */,
+				3D236FD4281132BB0086CC58 /* Currency ExchangerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -178,6 +208,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3D236FD3281132BB0086CC58 /* Currency ExchangerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D236FDA281132BC0086CC58 /* Build configuration list for PBXNativeTarget "Currency ExchangerTests" */;
+			buildPhases = (
+				3D236FD0281132BB0086CC58 /* Sources */,
+				3D236FD1281132BB0086CC58 /* Frameworks */,
+				3D236FD2281132BB0086CC58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D236FD9281132BB0086CC58 /* PBXTargetDependency */,
+			);
+			name = "Currency ExchangerTests";
+			productName = "Currency ExchangerTests";
+			productReference = 3D236FD4281132BB0086CC58 /* Currency ExchangerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		3DF7F075280BDFC600E8A9A5 /* Currency Exchanger */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DF7F084280BDFC700E8A9A5 /* Build configuration list for PBXNativeTarget "Currency Exchanger" */;
@@ -208,6 +256,10 @@
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
+					3D236FD3281132BB0086CC58 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 3DF7F075280BDFC600E8A9A5;
+					};
 					3DF7F075280BDFC600E8A9A5 = {
 						CreatedOnToolsVersion = 13.3;
 					};
@@ -230,11 +282,19 @@
 			projectRoot = "";
 			targets = (
 				3DF7F075280BDFC600E8A9A5 /* Currency Exchanger */,
+				3D236FD3281132BB0086CC58 /* Currency ExchangerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3D236FD2281132BB0086CC58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3DF7F074280BDFC600E8A9A5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -249,6 +309,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3D236FD0281132BB0086CC58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D236FD7281132BB0086CC58 /* Currency_ExchangerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3DF7F072280BDFC600E8A9A5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -274,6 +342,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		3D236FD9281132BB0086CC58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3DF7F075280BDFC600E8A9A5 /* Currency Exchanger */;
+			targetProxy = 3D236FD8281132BB0086CC58 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		3D236FB7280E75710086CC58 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
@@ -286,6 +362,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3D236FDB281132BC0086CC58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6B57LUDFDG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ir.vahidsayad.Currency-ExchangerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Currency Exchanger.app/Currency Exchanger";
+			};
+			name = Debug;
+		};
+		3D236FDC281132BC0086CC58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6B57LUDFDG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ir.vahidsayad.Currency-ExchangerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Currency Exchanger.app/Currency Exchanger";
+			};
+			name = Release;
+		};
 		3DF7F082280BDFC700E8A9A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -465,6 +577,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3D236FDA281132BC0086CC58 /* Build configuration list for PBXNativeTarget "Currency ExchangerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D236FDB281132BC0086CC58 /* Debug */,
+				3D236FDC281132BC0086CC58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3DF7F071280BDFC600E8A9A5 /* Build configuration list for PBXProject "Currency Exchanger" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
