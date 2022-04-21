@@ -31,28 +31,6 @@ class DataController: ObservableObject {
         return container.viewContext
     }()
     
-    func performBackgroundSaveTask(_ block: @escaping (NSManagedObjectContext) -> Void, saveCompletion: ((_ text: String?)-> Void)?) {
-        container.performBackgroundTask { (context: NSManagedObjectContext) in
-            context.automaticallyMergesChangesFromParent = true
-            context.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-            block(context)
-            do {
-                if context.hasChanges {
-                    try context.save()
-                    print("Context Saved")
-                }
-                DispatchQueue.main.async {
-                    saveCompletion?(nil)
-                }
-            } catch let error {
-                print("Context Saved: [Error]")
-                DispatchQueue.main.async {
-                    saveCompletion?(error.localizedDescription)
-                }
-            }
-        }
-    }
-    
     func save() {
         let context = container.viewContext
         if context.hasChanges {

@@ -46,19 +46,14 @@ extension ExchangeView {
             }
         }
         
-        var amountColor: Color {
-            switch type {
-            case .sell:
+        func colorOfExchangedAmount(of amount: String) -> Color {
+            guard let number = Double(amount) else { return .black }
+            if number > 0 {
+                return .green
+            } else if number == 0 {
                 return .black
-            case .recieve:
-//                guard let number = Double(amount) else { return .black }
-//                if number > 0 {
-//                    return .green
-//                } else if number == 0 {
-                    return .black
-//                } else {
-//                    return .red
-//                }
+            } else {
+                return .red
             }
         }
         

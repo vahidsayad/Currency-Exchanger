@@ -41,7 +41,7 @@ struct ExchangeView: View {
                             Text(amount)
                                 .multilineTextAlignment(.trailing)
                                 .padding(.horizontal)
-                                .foregroundColor(vm.amountColor)
+                                .foregroundColor(vm.colorOfExchangedAmount(of: amount))
                         }
 
                         Menu {
@@ -71,16 +71,3 @@ struct ExchangeView: View {
         }
     }
 }
-
-//struct SellView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ExchangeView(vm: ExchangeView.ViewModel(type: .recieve, amount: .constant("234.00"), currency: .constant(.jpy)))
-//            .previewLayout(.fixed(width: 360, height: 80))
-//            .padding()
-//        
-//        ExchangeView(vm: ExchangeView.ViewModel(type: .recieve, amount: .constant("234.00"), currency: .constant(.jpy)))
-//            .previewLayout(.fixed(width: 360, height: 80))
-//            .padding()
-//            .preferredColorScheme(.dark)
-//    }
-//}

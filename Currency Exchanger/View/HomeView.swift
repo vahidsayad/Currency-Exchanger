@@ -7,22 +7,6 @@
 
 import SwiftUI
 
-struct TitleModifier: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .font(.system(.subheadline))
-            .foregroundColor(Color.gray.opacity(0.8))
-            .textCase(.uppercase)
-            .padding()
-    }
-}
-
-extension View {
-    func balanceTitle() -> some View {
-        self.modifier(TitleModifier())
-    }
-}
-
 struct HomeView: View {
     @Environment(\.managedObjectContext) var moc
     @StateObject private var vm = ViewModel()
