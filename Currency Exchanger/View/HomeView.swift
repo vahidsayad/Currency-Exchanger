@@ -89,6 +89,9 @@ struct HomeView: View {
                 Alert(title: Text("error"), message: Text(vm.errorMessage), dismissButton: .default(Text("ok"), action: {
                 }))
             }
+            .onAppear {
+                vm.refresh()
+            }
         }
     }
 }

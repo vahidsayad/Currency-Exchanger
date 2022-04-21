@@ -23,9 +23,8 @@ struct ContentView: View {
             }
             
             balance.currency = currency.rawValue
+            try? moc.save()
         }
-        
-        try? moc.save()
     }
     
     var body: some View {

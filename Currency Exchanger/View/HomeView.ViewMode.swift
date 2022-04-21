@@ -146,5 +146,8 @@ extension HomeView {
             self.showError = true
         }
         
+        func refresh() {
+            self.balances = getBalances()
+        }
     }
 }
